@@ -12,9 +12,11 @@
 
 [![Build Status](https://travis-ci.org/verekia/js-stack-from-scratch.svg?branch=master)](https://travis-ci.org/verekia/js-stack-from-scratch)
 
-## Перевод еще полностью не завершен. Это не окончательная версия!
+## Работа над переводом идет. Это не окончательная версия!
+
 перевод терминов см. [Definitions.md](Definitions.md)
-[вопросы, замечания, предложения](issues)
+
+[вопросы, замечания, предложения](https://github.com/UsulPro/js-stack-from-scratch/issues)
 
 Welcome to my modern JavaScript stack tutorial: **JavaScript Stack from Scratch**.
 
