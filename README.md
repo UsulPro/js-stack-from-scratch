@@ -18,49 +18,23 @@
 
 [вопросы, замечания, предложения](https://github.com/UsulPro/js-stack-from-scratch/issues)
 
-Welcome to my modern JavaScript stack tutorial: **JavaScript Stack from Scratch**.
+Добро пожаловать в мое современное руководство по JavaScript стеку: **JavaScript стек с Нуля**.
 
-This is a minimalistic and straight-to-the-point guide to assembling a JavaScript stack. It requires some general programming knowledge, and JavaScript basics. **It focuses on wiring tools together** and giving you the **simplest possible example** for each tool. You can see this tutorial as *a way to write your own boilerplate from scratch*.
+Это минималистичное и "сразу-к-делу" руководство по сборке JavaScript стека. Оно требует некоторых общих знаний программирования и основ JavaScript. **Оно фокусируется на использовании инструментов вместе** и дает Вам **простейший возможный пример** для каждого инструмента. Вы можете рассматривать это руководство как *путь создания собственного шаблона с нуля*.
 
-You don't need to use this entire stack if you build a simple web page with a few JS interactions of course (a combination of Babel + jQuery is enough!), but if you want to build a web app that scales, and need help setting things up, this tutorial will work great for you.
+Конечно, Вам не обязательно использовать весь этот стек для создания простой web-страницы с несколькими JS взаимодействиями (комбинации Babel + jQuery достаточно!), но если Вы хотите построить масштабируемое веб-приложение, и Вам нужна помощь в настройке, это руководство отлично Вам подойдёт.
 
-Since the goal of this tutorial is to assemble various tools, I do not go into details about how these tools work individually. Refer to their documentation or find other tutorials if you want to acquire deeper knowledge in them.
+Поскольку целью данного руководства является сборка различных инструментов, я не буду вдаваться в подробности о том, как эти инструменты работают по-отдельности. Обратитесь к документации или найдите другие руководства, если хотите получить более углубленные знания о них.
 
-A big chunk of the stack described in this tutorial uses React. If you are beginning and just want to learn React, [create-react-app](https://github.com/facebookincubator/create-react-app) will get you up and running with a React environment very quickly with a premade configuration. I would for instance recommend this approach to someone who arrives in a team that's using React and needs to catch up with a learning playground. In this tutorial you won't use a premade configuration, because I want you to understand everything that's happening under the hood.
+Большая часть стека, описанного в данном руководстве, использует React. Если Вы только начинаете и просто хотите изучить React, [create-react-app](https://github.com/facebookincubator/create-react-app) поможет Вам очень быстро настроить окружение React с готовой конфигурацией. Я бы, например, рекомендовал бы этот подход тем, кто пришел в команду, использующую React, и вынужден догонять. В этом руководстве Вы не будете использовать готовую конфигурацию, потому что я хочу, чтобы Вы поняли все, что происходит под капотом.
 
-Code examples are available for each chapter, and you can run them all with `yarn && yarn start` or `npm install && npm start`. I recommend writing everything from scratch yourself by following the **step-by-step instructions** of each chapter.
+Для каждой главы доступны примеры кода, и Вы можете запустить их все с помощью `yarn && yarn start` или `npm install && npm start`. Я рекомендую писать все с нуля самостоятельно, следуя **пошаговым инструкциям** в каждой главе.
 
-**Every chapter contains the code of previous chapters**, so if you are simply looking for a boilerplate project containing everything, just clone the last chapter and you're good to go.
+**Каждая глава содержит код из предыдущих глав**, так что если Вы просто ищете шаблон проекта, содержащий сразу все, клонируйте последнюю главу и готово.
 
-Note: The order of chapters is not necessarily the most educational. For instance, testing / type checking could have been done before introducing React. It is quite difficult to move chapters around or edit past ones, since I need to apply those changes to every following chapter. If things settle down, I might reorganize the whole thing in a better way.
+Примечание: Порядок глав не обязательно является наиболее познавательным. Например, тестирование / типизация могли бы быть перед введением в React. Премещать разделы довольно трудно, так как мне нужно вносить изменения в каждую следующую главу. Если все устаканится, я мог бы реорганизовать все это в лучшую сторону.
 
-The code of this tutorial works on Linux, macOS, and Windows.
-
-## Table of contents
-
-[1 - Node, NPM, Yarn, and package.json](/tutorial/1-node-npm-yarn-package-json)
-
-[2 - Installing and using a package](/tutorial/2-packages)
-
-[3 - Setting up ES6 with Babel and Gulp](/tutorial/3-es6-babel-gulp)
-
-[4 - Using the ES6 syntax with a class](/tutorial/4-es6-syntax-class)
-
-[5 - The ES6 modules syntax](/tutorial/5-es6-modules-syntax)
-
-[6 - ESLint](/tutorial/6-eslint)
-
-[7 - Client app with Webpack](/tutorial/7-client-webpack)
-
-[8 - React](/tutorial/8-react)
-
-[9 - Redux](/tutorial/9-redux)
-
-[10 - Immutable JS and Redux Improvements](/tutorial/10-immutable-redux-improvements)
-
-[11 - Testing with Mocha, Chai, and Sinon](/tutorial/11-testing-mocha-chai-sinon)
-
-[12 - Type Checking with Flow](/tutorial/12-flow)
+Код данного руководства работает на Linux, macOS и Windows.
 
 ## Содержание
 
@@ -70,37 +44,37 @@ The code of this tutorial works on Linux, macOS, and Windows.
 
 [3 - Настройка ES6 с Babel и Gulp](/tutorial/3-es6-babel-gulp)
 
-[4 - Использование ES6 синтактиса ~~и классов~~](/tutorial/4-es6-syntax-class)
+[4 - Использование синтактиса ES6 и классов](/tutorial/4-es6-syntax-class)
 
 [5 - Синтаксис модулей ES6](/tutorial/5-es6-modules-syntax)
 
 [6 - ESLint](/tutorial/6-eslint)
 
-[7 - Клиентское приложение ~на основе Webpack~](/tutorial/7-client-webpack)
+[7 - Клиентское приложение на основе Webpack](/tutorial/7-client-webpack)
 
 [8 - React](/tutorial/8-react)
 
 [9 - Redux](/tutorial/9-redux)
 
-[10 - Immutable JS and ~Redux Improvements~](/tutorial/10-immutable-redux-improvements)
+[10 - Иммутабельный JS и улучшения Redux](/tutorial/10-immutable-redux-improvements)
 
 [11 - Тестировние с Mocha, Chai, и Sinon](/tutorial/11-testing-mocha-chai-sinon)
 
-[12 - ~Типизация с~ Flow](/tutorial/12-flow)
+[12 - Типизация с Flow](/tutorial/12-flow)
 
-## Coming up next
+## Скоро
 
-Production / development environments, Express, React Router, Server-Side Rendering, Styling, Enzyme, Git Hooks.
+Production / development окружения, Express, React Router, серверный рендеринг, стилизация, Enzyme, перехватчики Git.
 
-## Translations
+## Переводы
 
-- [Chinese](https://github.com/pd4d10/js-stack-from-scratch) by [@pd4d10](http://github.com/pd4d10)
-- [Italian](https://github.com/fbertone/js-stack-from-scratch) by [Fabrizio Bertone](https://github.com/fbertone)
+- [Китайский](https://github.com/pd4d10/js-stack-from-scratch) by [@pd4d10](http://github.com/pd4d10)
+- [Итальянский](https://github.com/fbertone/js-stack-from-scratch) by [Fabrizio Bertone](https://github.com/fbertone)
 
-If you want to add your translation, please read the [translation recommendations](/how-to-translate.md) to get started!
+Если Вы хотите добавить Ваш перевод, пожалуйста, прочитайте [рекомендации к переводу](/how-to-translate.md) перед тем как начать!
 
-## Credits
+## Сведения
 
-Created by [@verekia](https://twitter.com/verekia) – [verekia.com](http://verekia.com/).
+Автор: [@verekia](https://twitter.com/verekia) – [verekia.com](http://verekia.com/).
 
-License: MIT
+Лицензия: MIT
