@@ -21,7 +21,7 @@ sudo apt-get install -y nodejs
 
 ## Инструменты управления версиями Node
 
-Если вам нужна гибкость в использовании нескольких версий Node, посмотри на [NVM](https://github.com/creationix/nvm) или [tj/n](https://github.com/tj/n).
+Если вам нужна гибкость в использовании нескольких версий Node, то обратите внимание на [NVM](https://github.com/creationix/nvm) или [tj/n](https://github.com/tj/n).
 
 ## NPM
 
@@ -33,7 +33,7 @@ NPM — это стандартный менеджер пакетов для Nod
 
 Поскольку он [вышел](https://code.facebook.com/posts/1840075619545360) в октябре 2016, он очень быстро адоптировался и может скоро станет менеджером пакетов по выбору JavaScript сообщества (become the package manager of choice of the JavaScript community). Если вы придерживаетесь NPM, вы можете просто заменить все `yarn add` и `yarn add --dev` команды на `npm install --save` и `npm install --save-dev`.
 
-Установите Yarn следуя [инструкциям](https://yarnpkg.com/en/docs/install) для вашей системы. Я рекомендую использовать **Installation Script** из вкладки *Alternatives* если вы используете MacOS или Unix, чтобы [избежать](https://github.com/yarnpkg/yarn/issues/1505) зависимости (relying) от других менеджеров пакетов:
+Установите Yarn следуя [инструкциям](https://yarnpkg.com/en/docs/install) для вашей системы. Я рекомендую использовать **Installation Script** из вкладки *Alternatives*, если вы используете MacOS или Unix, чтобы [избежать](https://github.com/yarnpkg/yarn/issues/1505) зависимости (relying) от других менеджеров пакетов:
 
 ```sh
 curl -o- -L https://yarnpkg.com/install.sh | bash
@@ -41,12 +41,12 @@ curl -o- -L https://yarnpkg.com/install.sh | bash
 
 ## `package.json`
 
-> 💡 **[package.json](https://yarnpkg.com/en/docs/package-json)** is the file used to describe and configure your JavaScript project. It contains general information (your project name, version, contributors, license, etc), configuration options for tools you use, and even a section to run *tasks*.
+> 💡 **[package.json](https://yarnpkg.com/en/docs/package-json)** — это файл, используемый для описания и конфигурации вашего JavaScript проекта. Он содержит основную информацию (имя вашего проекта, версию, соучастников (contributors), лицензию и т.д.), кофигурацию используюемых вами инструментов и даже раздел для запуска *задач*.
 
-- Create a new folder to work in, and `cd` in it.
-- Run `yarn init` and answer the questions (`yarn init -y` to skip all questions), to generate a `package.json` file automatically.
+- Создайте новую папку для работы в ней, и `cd` в нее.
+- Запустите `yarn init` и ответьте на вопросы (`yarn init -y` для пропуска всех вопросов), чтобы сгенерировать `package.json` файл автоматически.
 
-Here is the basic `package.json` I'll use in this tutorial:
+Это базовый `package.json`, который я буду использовать в этом курсе:
 
 ```json
 {
@@ -58,11 +58,11 @@ Here is the basic `package.json` I'll use in this tutorial:
 
 ## Hello World
 
-- Create an `index.js` file containing `console.log('Hello world')`
+- Создайте `index.js` файл, содержащий `console.log('Hello world')`
 
-🏁 Run `node .` in this folder (`index.js` is the default file Node looks for in a folder). It should print "Hello world".
+🏁 Запустите `node .` в этой папке (Node по умолчанию ище в папке `index.js`). Должно напечататься "Hello world".
 
-**Note**: See that 🏁 racing flag emoji? I will use it every time you reach a **checkpoint**. We are sometimes going to make a lot of changes in a row, and your code may not work until you reach the next checkpoint.
+**Note**: Видите 🏁 емодзи в виде гоночного флага? я буду использовать его каждый раз, когда вы достигаете **чекпоинт**. Иногда мы будем делать много изменений за раз, и ваш код может не работать до тех пор, пока вы не достигните следующего чекпоинта.
 
 ## `start` script
 
