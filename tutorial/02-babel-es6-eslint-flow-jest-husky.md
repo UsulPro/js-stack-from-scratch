@@ -1,25 +1,25 @@
-# 02 - Babel, ES6, ESLint, Flow, Jest, and Husky
+# 02 - Babel, ES6, ESLint, Flow, Jest и Husky
 
-Code for this chapter available [here](https://github.com/verekia/js-stack-walkthrough/tree/master/02-babel-es6-eslint-flow-jest-husky).
+Код для этой главы доступен [здесь](https://github.com/verekia/js-stack-walkthrough/tree/master/02-babel-es6-eslint-flow-jest-husky).
 
-We're now going to use some ES6 syntax, which is a great improvement over the "old" ES5 syntax. All browsers and JS environments understand ES5 well, but not ES6. That's where a tool called Babel comes to the rescue!
+Мы будем использовать ES6 синтакс, который имеет заничетльные улучшения по сравнению со "старым" ES5 синтаксисом. Все браузеры и JS среды (environments) хорошо понимают ES5, но не ES6. Вот где инструмент под название Babel приходит на помощь!
 
 ## Babel
 
-> 💡 **[Babel](https://babeljs.io/)** is a compiler that transforms ES6 code (and other things like React's JSX syntax) into ES5 code. It is very modular and can be used in tons of different [environments](https://babeljs.io/docs/setup/). It is by far the preferred ES5 compiler of the React community.
+> 💡 **[Babel](https://babeljs.io/)** — это компилятор, который превращает ES6 код (и другие вещи, вроде JSX синтаксиса React) в ES5 код. Он имеет очень много модулей и может быть использован в большинстве различных [сред](https://babeljs.io/docs/setup/). Это безусловно предпочтительный ES5 компилятор сообщества React.
 
-- Move your `index.js` into a new `src` folder. This is where you will write your ES6 code. Remove the previous `color`-related code in `index.js`, and replace it with a simple:
+- Переместите ваш `index.js` в новую папку `src`. Здесь вы будете писать ваш ES6 код. Удалите предыдущий код в `index.js`и замените его на:
 
 ```js
 const str = 'ES6'
 console.log(`Hello ${str}`)
 ```
 
-We're using a *template string* here, which is an ES6 feature that lets us inject variables directly inside the string without concatenation using `${}`. Note that template strings are created using **backquotes**.
+Здесь мы используем *шаблонную строку*, которая является особенностью ES6, которая позволяет нам вставлять переменные прямо внутрь строки, без использования конкатенации, используя `${}`. Обратите внимание на то, что шаблонная строка создана с помощью **обратных кавычек**.
 
-- Run `yarn add --dev babel-cli` to install the CLI interface for Babel.
+- Запустите `yarn add --dev babel-cli`, чтобы установить CLI интерфейс для Babel.
 
-Babel CLI comes with [two executables](https://babeljs.io/docs/usage/cli/): `babel`, which compiles ES6 files into new ES5 files, and `babel-node`, which you can use to replace your call to the `node` binary and execute ES6 files directly on the fly. `babel-node` is great for development but it is heavy and not meant for production. In this chapter we are going to use `babel-node` to set up the development environment, and in the next one we'll use `babel` to build ES5 files for production.
+Babel CLI идет вместе с [двумя исполняемыми файлами](https://babeljs.io/docs/usage/cli/): `babel`, который компилирует ES6 в новые ES5 файлы, и `babel-node`, который вы можете использовать, чтобы выполнять ES6 файлы налету. `babel-node` is great for development but it is heavy and not meant for production. In this chapter we are going to use `babel-node` to set up the development environment, and in the next one we'll use `babel` to build ES5 files for production.
 
 - In `package.json`, in your `start` script, replace `node .` by `babel-node src` (`index.js` is the default file Node looks for, which is why we can omit `index.js`).
 
