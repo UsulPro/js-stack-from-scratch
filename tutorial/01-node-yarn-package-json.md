@@ -62,13 +62,13 @@ curl -o- -L https://yarnpkg.com/install.sh | bash
 
 🏁 Запустите `node .` в этой папке (Node по умолчанию ище в папке `index.js`). Должно напечататься "Hello world".
 
-**Note**: Видите 🏁 емодзи в виде гоночного флага? я буду использовать его каждый раз, когда вы достигаете **чекпоинт**. Иногда мы будем делать много изменений за раз, и ваш код может не работать до тех пор, пока вы не достигните следующего чекпоинта.
+**Заметка**: Видите 🏁 емодзи в виде гоночного флага? я буду использовать его каждый раз, когда вы достигаете **чекпоинт**. Иногда мы будем делать много изменений за раз, и ваш код может не работать до тех пор, пока вы не достигните следующего чекпоинта.
 
-## `start` script
+## Скрипт `start`
 
-Running `node .` to execute our program is a bit too low-level. We are going to use an NPM/Yarn script to trigger the execution of that code instead. That will give us a nice abstraction to be able to always use `yarn start`, even when our program gets more complicated.
+Запуск `node .` для выполнения нашей программы слишком низкоуровнево (is a bit too low-level). Вместо этого мы будем использовать NPM/Yarn скрипт, чтобы запустить выполнение нашего кода. Это даст нам хорошую абстракцию, чтобы мы могли всегда использовать `yarn start`, даже когда наша программа станет более сложной.
 
-- In `package.json`, add a `scripts` object like so:
+- В `package.json`, добавьте объект `scripts` вроде этого:
 
 ```json
 {
@@ -81,42 +81,42 @@ Running `node .` to execute our program is a bit too low-level. We are going to 
 }
 ```
 
-`start` is the name we give to the *task* that will run our program. We are going to create a lot of different tasks in this `scripts` object throughout this tutorial. `start` is typically the name given to the default task of an application. Some other standard task names are `stop` and `test`.
+`start` — это имя, которое мы даем *задаче*, которая запускает нашу программуу. На протяжении этого курса мы создадим множество различных задач вы `scripts` объекте. `start` — это типичное имя, даваемое задаче по умолчанию (to the default task of an application). Названия некоторых других стандартных задач:`stop` и `test`.
 
-`package.json` must be a valid JSON file, which means that you cannot have trailing commas. So be careful when editing manually your `package.json` file.
+`package.json` должен быть верным JSON файлом, что значит то, что вы не можете ставить запятую в конце. Так что будьте осторожны, когда вручную изменяете ваш `package.json` файл.
 
-🏁 Run `yarn start`. It should print `Hello world`.
+🏁 Запустите `yarn start`. Должно напечататься `Hello world`.
 
-## Git and `.gitignore`
+## Git и `.gitignore`
 
-- Initialize a Git repository with `git init`
+- Инициализируйте Git репозиторий с помощью `git init`
 
-- Create a `.gitignore` file and add the following to it:
+- Создайте `.gitignore` файл и добавьте в него следующее:
 
 ```gitignore
 .DS_Store
 /*.log
 ```
 
-`.DS_Store` files are auto-generated macOS files that you should never have in your repository.
+`.DS_Store` автоматически созданные MacOS файлы, которые вам никогда не следует иметь в репозитории.
 
-`npm-debug.log` and `yarn-error.log` are files that are created when your package manager encounters an error, we don't want them versioned in our repository.
+`npm-debug.log` и `yarn-error.log` файлы, которые создаются когда вам менджер пакетов встречает ошибку, нам не нужно иметь их в нашем репозитории.
 
-## Installing and using a package
+## Установка и использование пакетов
 
-In this section we will install and use a package. A "package" is simply a piece of code that someone else wrote, and that you can use in your own code. It can be anything. Here, we're going to try a package that helps you manipulate colors for instance.
+В этом разделе мы будем устанавливать и использовать пакеты. "Пакет" — это просто часть кода, которую написал кто-то другой, и которую вы можете использовать в своем коде. Это может быть все что угодно. Например, сейчас мы попробуем использовать пакет, который поможет вам работать с цветами.
 
-- Install the community-made package called `color` by running `yarn add color`
+- Установите пакет, сделанный сообществом, под названиием `color` с помощью запуска `yarn add color`
 
-Open `package.json` to see how Yarn automatically added `color` in  `dependencies`.
+Откройте `package.json`, чтобы увидеть как Yarn автоматически добавил `color` в `dependencies`.
 
-A `node_modules` folder has been created to store the package.
+Папка `node_modules` была создана для хранения пакетов.
 
-- Add `node_modules/` to your `.gitignore`
+- Добавьте `node_modules/` в ваш `.gitignore`
 
-You will also notice that a `yarn.lock` file got generated by Yarn. You should commit this file to your repository, as it will ensure that everyone in your team uses the same version of your packages. If you're sticking to NPM instead of Yarn, the equivalent of this file is the *shrinkwrap*.
+Вы также можете заметить, что Yarn сгенерировал файл `yarn.lock`. Вам следует коммитить (commit) этот файл в ваш репозиторий, так как это гарантирует, что каждый в вашей команде использует ту же версию что и вы. Если вы придерживаетесь NPM вместо Yarn, *shrinkwrap* — эквивалент этого файла.
 
-- Write the following to your `index.js` file:
+- Напишите в вашем `index.js` файле следующее:
 
 ```js
 const color = require('color')
@@ -126,22 +126,22 @@ const redHexa = color({ r: 255, g: 0, b: 0 }).hex()
 console.log(redHexa)
 ```
 
-🏁 Run `yarn start`. It should print `#FF0000`.
+🏁 Запустите `yarn start`. Должно напечататься `#FF0000`.
 
-Congratulations, you installed and used a package!
+Поздравляем, вы установили и использовали пакет!
 
-`color` is just used in this section to teach you how to use a simple package. We won't need it anymore, so you can uninstall it:
+`color` используется в этом разделе просто для того, чтобы научить вас как использовать простой пакет. Больше он нам не нужен, так что вы можете удалить его:
 
-- Run `yarn remove color`
+- Запустите `yarn remove color`
 
-## Two kinds of dependencies
+## Два вида зависимостей
 
-There are two kinds of package dependencies, `"dependencies"` and `"devDependencies"`:
+Существует два вида зависимостей, `"dependencies"` и `"devDependencies"`:
 
-**Dependencies** are libraries you need for your application to function (React, Redux, Lodash, jQuery, etc). You install them with `yarn add [package]`.
+**Dependencies** — библиотеки, которые нужны вашему приложению для функционирования (React, Redux, Lodash, jQuery, etc). Вы можете установить их с помощью `yarn add [package]`.
 
-**Dev Dependencies** are libraries used during development or to build your application (Webpack, SASS, linters, testing frameworks, etc). You install those with `yarn add --dev [package]`.
+**Dev Dependencies** — библиотеки, используемые во время разработки или для сборки вашего приложения (Webpack, SASS, linters, testing frameworks, etc). Они устанавливаются с помощью `yarn add --dev [package]`.
 
-Next section: [02 - Babel, ES6, ESLint, Flow, Jest, Husky](02-babel-es6-eslint-flow-jest-husky.md#readme)
+Следующий раздел: [02 - Babel, ES6, ESLint, Flow, Jest, Husky](02-babel-es6-eslint-flow-jest-husky.md#readme)
 
-Back to the [table of contents](https://github.com/verekia/js-stack-from-scratch#table-of-contents).
+Вернуться к [содержанию](https://github.com/UsulPro/js-stack-from-scratch#Содержание).
